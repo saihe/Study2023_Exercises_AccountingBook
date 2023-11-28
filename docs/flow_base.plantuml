@@ -1,0 +1,16 @@
+@startuml 基本フロー
+
+start
+
+
+while (強制終了するかホーム画面から `q` を入力するまで)
+:ホーム画面描画;
+:入力待ち;
+if (遷移先画面の番号を入力) then
+  :各画面ごとの業務処理実施;
+endif
+endwhile
+
+stop
+
+@enduml

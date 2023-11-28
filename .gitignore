@@ -6,3 +6,5 @@ out
 .gradle
 gradlew
 gradlew.bat
+bin
+*.db

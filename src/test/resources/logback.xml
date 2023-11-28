@@ -1,0 +1,14 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <logger name="jp" level="info" />
+    <logger name="org.hibernate.orm.query.plan.cache" level="debug" />
+    <logger name="org.hibernate.SQL" level="debug" />
+    <logger name="org.hibernate.orm.jdbc.bind" level="trace" />
+    <root level="error">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

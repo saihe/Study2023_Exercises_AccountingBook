@@ -1,0 +1,27 @@
+@startuml 収支入力シーケンス
+
+actor ユーザー as user
+participant ホーム画面 as home
+participant 収支入力画面 as input
+
+user -> home: アプリ起動
+home -> user: メニュー描画
+user -> input: 1を選択
+input -> user: 入力画面描画、入力待ち
+user -> input: 年に対する値を入力
+input -> user: 入力待ち
+user -> input: 月に対する値を入力
+input -> user: 入力待ち
+user -> input: 日に対する値を入力
+input -> user: 入力待ち
+user -> input: 収支区分に対する値を入力
+input -> user: 入力待ち
+user -> input: 科目に対する値を入力
+input -> user: 入力待ち
+user -> input: 金額に対する値を入力
+input -> user: 入力待ち
+user -> input: 空Enterで確定
+input -> home: ホーム画面へ遷移
+home -> user: 画面描画
+
+@enduml

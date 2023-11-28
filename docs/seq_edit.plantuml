@@ -1,0 +1,28 @@
+@startuml 収支編集シーケンス
+
+actor ユーザー as user
+participant ホーム画面 as home
+participant 収支検索画面 as search
+participant 収支編集画面 as edit
+
+user -> home: アプリ起動
+home -> search: 収支検索画面へ遷移
+search -> edit: 編集画面へ遷移
+edit -> user: 画面描画、入力待ち
+user -> edit: 年に対する値を入力（空エンターで元の値を設定）
+edit -> user: 入力待ち
+user -> edit: 月に対する値を入力（空エンターで元の値を設定）
+edit -> user: 入力待ち
+user -> edit: 日に対する値を入力（空エンターで元の値を設定）
+edit -> user: 入力待ち
+user -> edit: 収支区分に対する値を入力（空エンターで元の値を設定）
+edit -> user: 入力待ち
+user -> edit: 科目に対する値を入力（空エンターで元の値を設定）
+edit -> user: 入力待ち
+user -> edit: 金額に対する値を入力（空エンターで元の値を設定）
+edit -> user: 入力待ち
+user -> edit: 空Enterで確定
+edit -> home: ホーム画面へ遷移
+home -> user: 画面描画
+
+@enduml
